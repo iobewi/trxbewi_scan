@@ -1,0 +1,8 @@
+# compose.local.yml (override local)
+services:
+  trxbewi_scan:
+    image: iobewi:trxbewi_scan
+    devices:
+      - /dev/ttyUSB0:/dev/ttyUSB0 
+    security_opt:
+      - no-new-privileges:true   # pas --privileged
